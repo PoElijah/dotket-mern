@@ -1,0 +1,19 @@
+.profileBlock {
+  @include flex-c-c;
+  width: 100%;
+  height: 100%;
+  &__container {
+    @include container;
+  }
+  &__image {
+    box-shadow: 0 0 5px $grayColor;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+    & img {
+      width: 100%;
+    }
+  }
+}

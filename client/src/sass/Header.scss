@@ -1,0 +1,104 @@
+.mainHeader {
+  @include flex-c;
+  justify-content: space-between;
+  height: $headerH;
+  width: 100%;
+  padding: 0 $defaultP;
+  box-shadow: 0 2px 5px $grayColor;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+}
+.mainLogo {
+  font-size: 30px;
+  font-weight: bold;
+  &:first-letter {
+    color: blueviolet;
+  }
+}
+.mainNav {
+  @include flex-c;
+  &__ul {
+    display: flex;
+    list-style: none;
+  }
+  &__link {
+    padding: 0 10px;
+    text-decoration: none;
+    color: #000;
+    &--active {
+      border-bottom: 1px solid blueviolet;
+    }
+  }
+  &__user {
+    width: 40px;
+    height: 40px;
+    @include flex-c-c;
+    border-radius: 50%;
+    box-shadow: 0 0 5px $grayColor;
+    cursor: pointer;
+    overflow: hidden;
+    margin-left: 15px;
+    & img {
+      width: 100%;
+    }
+  }
+}
+.mainSearch {
+  box-shadow: 0 0 5px $grayColor;
+  border-radius: 5px;
+  padding: 5px 15px;
+  @include flex-c;
+  &:focus-within {
+    box-shadow: 0 0 5px blueviolet;
+  }
+  &__input {
+    border: none;
+    background: transparent;
+    outline-color: transparent;
+    min-width: 200px;
+  }
+}
+.userBlock {
+  position: absolute;
+  right: 30px;
+  top: 110%;
+  min-width: 200px;
+  @include flex-c-c;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 2px 5px $grayColor;
+  border-radius: 5px;
+  padding: 15px;
+  transition: .3s ease-in;
+  transform-origin: right top;
+  transform: scale(0);
+  &--active {
+    transform: scale(1);
+  }
+  &__input {
+    @include input
+  }
+  &__btn {
+    @include button;
+  }
+  &__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px $grayColor;
+    overflow: hidden;
+    margin-bottom: 15px;
+    & img {
+      width: 100%;
+    }
+  }
+  &__link {
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: lowercase;
+    color: rgb(40,40,40)
+  }
+}

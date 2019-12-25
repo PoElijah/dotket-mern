@@ -1,0 +1,54 @@
+@mixin flex-c {
+  display: flex;
+  align-items: center;
+}
+@mixin flex-c-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin input {
+  border: none;
+  border-bottom: 1px solid #000;
+  padding: 5px 15px;
+  margin: 5px 0;
+  outline-color: transparent;
+  transition: .2s ease-in;
+  &:focus {
+    border-bottom: 1px solid blueviolet;
+  }
+}
+@mixin button {
+  width: 100%;
+  padding: 5px 0;
+  border: none;
+  border-radius: 5px;
+  background: darkgray;
+  color: #fff;
+  margin: 10px 0;
+  cursor: not-allowed;
+  outline-color: transparent;
+  pointer-events: none;
+  &:focus {
+    background: darken(blueviolet, 10%);
+  }
+  &--active {
+    background: blueviolet;
+    cursor: pointer;
+    pointer-events: all;
+  }
+}
+@mixin container {
+  box-shadow: 0 0 5px $grayColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+}
+@mixin circle {
+  width: 40px;
+  height: 40px;
+  @include flex-c-c;
+  border-radius: 50%;
+}

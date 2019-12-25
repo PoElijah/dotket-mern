@@ -1,0 +1,33 @@
+.singleProduct {
+  box-shadow: 0 0 5px $grayColor;
+  display: flex;
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px;
+  &__left {
+    display: flex;
+    flex-flow: column;
+    width: 15%;
+  }
+  &__right {
+    display: flex;
+    padding-left: 30px;
+    flex-flow: column;
+    width: 85%;
+  }
+  &__img {
+    max-width: 200px;
+  }
+  &__desc {
+    padding-top: 10px;
+  }
+  &__user {
+    list-style: none;
+  }
+  &__product {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+}

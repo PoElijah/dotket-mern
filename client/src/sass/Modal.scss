@@ -1,0 +1,44 @@
+.modalBlock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(40,40,40,.1);
+  width: 100%;
+  height: 100%;
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 350px;
+    min-height: 350px;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    box-shadow: 0 0 5px $grayColor;
+
+  }
+  &__header {
+    @include flex-c;
+    justify-content: space-between;
+    border-bottom: 1px solid $grayColor;
+    padding: 15px;
+  }
+  &__content {
+    padding: 15px;
+    @include flex-c-c;
+    width: 100%;
+    flex: 1;
+  }
+  &__footer {
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    justify-content: flex-end;
+  }
+  &__btn {
+    @include button;
+    margin: 0;
+  }
+}
